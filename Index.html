@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocky Rhino Coating</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+    }
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 500px; /* Bigger logo */
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      color: #00aaff;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service-box {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .service-box h3 {
+      margin-bottom: 10px;
+      color: #00aaff;
+    }
+    .cta {
+      background: linear-gradient(135deg, #00aaff, #004466);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 10px;
+      animation: pulse 3s infinite;
+    }
+    .cta h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .cta a {
+      background: #fff;
+      color: #004466;
+      padding: 14px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .cta a:hover {
+      background: #004466;
+      color: #fff;
+    }
+    @keyframes pulse {
+      0% {box-shadow: 0 0 10px rgba(0,170,255,0.7);}
+      50% {box-shadow: 0 0 25px rgba(0,170,255,1);}
+      100% {box-shadow: 0 0 10px rgba(0,170,255,0.7);}
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo.png" alt="Rocky Rhino Coating Logo">
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Protect & Style Your Ride</h1>
+    <p>High-performance bedliner & coating solutions for trucks, cars, and commercial vehicles.</p>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Truck Bed Coating</h3>
+        <p>Durable bedliner protection to withstand the toughest jobs.</p>
+      </div>
+      <div class="service-box">
+        <h3>Full Vehicle Coating</h3>
+        <p>Complete truck and car coating for maximum durability and style.</p>
+      </div>
+      <div class="service-box">
+        <h3>Commercial Fleet Coating</h3>
+        <p>Protect your work vehicles with heavy-duty coatings built to last.</p>
+      </div>
+      <div class="service-box">
+        <h3>Wheel & Caliper Painting</h3>
+        <p>Custom painted rims and calipers to make your ride stand out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>At Rocky Rhino Coating, we specialize in high-quality bedliner and protective coatings. From truck beds to full vehicle wraps, our mission is to deliver durability and style. Whether it’s your daily driver, off-road beast, or commercial fleet, we’ve got you covered.</p>
+  </section>
+
+  <section class="section cta" id="contact">
+    <h2>Get a Free Quote Today!</h2>
+    <p>Contact us now to protect and customize your vehicle with the strongest coatings available. 
+      <p> Email Us at rockyrhinocoating@gmail.com or call us at (970) 775-8084</p>
+    </p>
+  
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rocky Rhino Coating. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
