@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rocky Rhino Coating</title>
   <style>
+    :root {
+      --primary: #00aaff;
+      --dark: #0d0d0d;
+      --darker: #111;
+      --light: #f5f5f5;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #f5f5f5;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
     }
     header {
-      background: #111;
-      padding: 20px;
+      background: var(--darker);
+      padding: 15px 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header img {
-      max-width: 500px; /* Bigger logo */
-      display: block;
-      margin: 0 auto 15px auto;
+      max-width: 220px;
+      height: auto;
     }
-
     nav {
       margin-top: 10px;
     }
     nav a {
-      margin: 0 15px;
-      color: #00aaff;
+      margin: 0 10px;
+      color: var(--primary);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 0.95rem;
       transition: color 0.3s ease;
     }
     nav a:hover {
       color: #fff;
     }
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      background-size: cover;
       color: white;
       text-align: center;
-      padding: 120px 20px;
-      animation: fadeIn 2s ease-in-out;
+      padding: 80px 20px;
     }
     .hero h1 {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-      color: #00aaff;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: var(--primary);
     }
     .hero p {
-      font-size: 1.2em;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+      font-size: 1rem;
+      max-width: 600px;
+      margin: auto;
     }
     .section {
-      padding: 60px 20px;
+      padding: 50px 20px;
       max-width: 1100px;
       margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+      font-size: 1.8rem;
     }
     .services {
       display: grid;
@@ -73,30 +87,36 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .service-box:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.6);
     }
     .service-box h3 {
       margin-bottom: 10px;
-      color: #00aaff;
+      color: var(--primary);
+      font-size: 1.2rem;
     }
     .cta {
-      background: linear-gradient(135deg, #00aaff, #004466);
+      background: linear-gradient(135deg, var(--primary), #004466);
       color: white;
       text-align: center;
-      padding: 50px 20px;
-      border-radius: 10px;
-      animation: pulse 3s infinite;
+      padding: 60px 25px;
+      border-radius: 12px;
+      margin-top: 30px;
     }
     .cta h2 {
-      margin-bottom: 20px;
-      font-size: 2em;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .cta p {
+      margin-bottom: 15px;
+      font-size: 1rem;
     }
     .cta a {
+      display: inline-block;
       background: #fff;
       color: #004466;
-      padding: 14px 30px;
-      border-radius: 5px;
+      padding: 12px 24px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s ease, color 0.3s ease;
@@ -105,17 +125,30 @@
       background: #004466;
       color: #fff;
     }
-    @keyframes pulse {
-      0% {box-shadow: 0 0 10px rgba(0,170,255,0.7);}
-      50% {box-shadow: 0 0 25px rgba(0,170,255,1);}
-      100% {box-shadow: 0 0 10px rgba(0,170,255,0.7);}
-    }
     footer {
-      background: #111;
+      background: var(--darker);
       color: #aaa;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      font-size: 0.9rem;
       margin-top: 40px;
+    }
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      header img {
+        max-width: 160px;
+      }
+      .hero {
+        padding: 60px 15px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -158,15 +191,15 @@
 
   <section class="section" id="about">
     <h2>About Us</h2>
-    <p>At Rocky Rhino Coating, we specialize in high-quality bedliner and protective coatings. From truck beds to full vehicle wraps, our mission is to deliver durability and style. Whether it’s your daily driver, off-road beast, or commercial fleet, we’ve got you covered.</p>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      At Rocky Rhino Coating, we specialize in high-quality bedliner and protective coatings. From truck beds to full vehicle wraps, our mission is to deliver durability and style. Whether it’s your daily driver, off-road beast, or commercial fleet, we’ve got you covered.
+    </p>
   </section>
 
   <section class="section cta" id="contact">
     <h2>Get a Free Quote Today!</h2>
-    <p>Contact us now to protect and customize your vehicle with the strongest coatings available. 
-      <p> Email us at <b> <u>rockyrhinocoating@gmail.com </u></b> or call us at<b> (970) 775-8084</b> </p>
-    </p>
-  
+    <p>Email us at <b><u>rockyrhinocoating@gmail.com</u></b> or call <b>(970) 775-8084</b></p>
+    <a href="mailto:rockyrhinocoating@gmail.com">Contact Us</a>
   </section>
 
   <footer>
